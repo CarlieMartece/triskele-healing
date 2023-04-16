@@ -3,12 +3,12 @@
   <nav>
     <router-link
       class="nav-item"
-      v-for="item in navItems"
-      :key="item[0]"
-      :to="item[2]"
+      v-for="page in navPages"
+      :key="page.id"
+      :to="page.slug"
     >
-      <img :src="item[1]" :alt="item[4]" />
-      <p>{{ item[0] }}</p>
+      <img :src="`/images/${page.image}.jpg`" :alt="page.name" />
+      <p>{{ page.name }}</p>
     </router-link>
   </nav>
   <div class="container">
@@ -17,21 +17,40 @@
 </template>
 
 <script>
-import homeImg from "./assets/2019.jpg";
-import treatImg from "./assets/2015.jpg";
-import courseImg from "./assets/2014.jpg";
-import linksImg from "./assets/2013.jpg";
-import contactImg from "./assets/2012.jpg";
-
 export default {
   data() {
     return {
-      navItems: [
-        ["Home", homeImg, "/", "Crown Chakra painting"],
-        ["Treatments", treatImg, "treatments", "Third Eye Chakra painting"],
-        ["Courses", courseImg, "courses", "Throat Chakra painting"],
-        ["Links", linksImg, "links", "Heart Chakra painting"],
-        ["Contact", contactImg, "contact", "Solar Plexus Chakra painting"],
+      navPages: [
+        {
+          id: "A",
+          slug: "/",
+          image: "2019",
+          name: "Home",
+        },
+        {
+          id: "B",
+          slug: "/treatments",
+          image: "2015",
+          name: "Treatments",
+        },
+        {
+          id: "C",
+          slug: "/courses",
+          image: "2014",
+          name: "Courses",
+        },
+        {
+          id: "D",
+          slug: "/links",
+          image: "2013",
+          name: "Links",
+        },
+        {
+          id: "E",
+          slug: "/contact",
+          image: "2012",
+          name: "Contact",
+        },
       ],
     };
   },
