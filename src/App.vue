@@ -13,9 +13,9 @@
       </router-link>
     </nav>
   </header>
-  <main>
+  <div id="container">
     <router-view />
-  </main>
+  </div>
 </template>
 
 <script>

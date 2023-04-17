@@ -1,5 +1,5 @@
 <template>
-  <div id="home">
+  <main id="home">
     <section class="upper-left">
       <h2>Maggie Mc Ateer</h2>
       <p>CThA, LCICI, VTCT</p>
@@ -80,5 +80,5 @@
         Candling."
       </p>
     </section>
-  </div>
+  </main>
 </template>
