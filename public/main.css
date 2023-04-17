@@ -7,15 +7,18 @@
 }
 
 #app {
+  /* border: 1px solid red; */
   color: #2c3e50;
+  display: inline-block;
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  height: 94vh;
+  height: 96vh;
   margin: 0 auto;
   -moz-osx-font-smoothing: grayscale;
-  padding: 2vw;
+  padding: 0 2vw 2vh;
   text-align: left;
   -webkit-font-smoothing: antialiased;
   width: 94vw;
+  overflow-y: scroll;
 }
 
 .center {
@@ -27,7 +30,7 @@
 }
 
 #container {
-  display: inline-block;
+  /* border: 1px solid purple; */
   margin: 0 auto 10px;
   max-width: 800px;
   width: 94vw;
@@ -69,6 +72,7 @@ ul {
 /* layout */
 
 main {
+  /* border: 1px solid blue; */
   display: grid;
   grid-template-columns: 94vw;
   grid-template-rows: repeat(3, max-content);
