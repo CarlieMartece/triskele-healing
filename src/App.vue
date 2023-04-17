@@ -77,8 +77,7 @@ header {
   display: block;
   height: 141px;
   margin: 0 auto;
-  max-width: 375px;
-  width: 98vw;
+  width: 340px;
 }
 img {
   width: 66px;
