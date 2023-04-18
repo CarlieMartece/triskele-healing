@@ -2,23 +2,24 @@
   background: transparent;
   margin: 0;
   outline: 0;
+  overflow: hidden;
   padding: 0;
   vertical-align: baseline;
 }
 
 #app {
   /* border: 1px solid red; */
+  background-color: #357960;
   color: #2c3e50;
   display: inline-block;
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  height: 96vh;
+  height: 100vh;
   margin: 0 auto;
   -moz-osx-font-smoothing: grayscale;
-  padding: 0 2vw 2vh;
+  padding: 0 2vw;
   text-align: left;
   -webkit-font-smoothing: antialiased;
-  width: 94vw;
-  overflow-y: scroll;
+  width: 96vw;
 }
 
 .center {
@@ -30,10 +31,13 @@
 }
 
 #container {
-  /* border: 1px solid purple; */
-  margin: 0 auto 10px;
+  background-color: white;
+  height: 96vh;
+  margin: 0 auto;
   max-width: 800px;
-  width: 94vw;
+  overflow-y: scroll;
+  padding: 0 4vw 4vh;
+  width: 88vw;
 }
 
 h1 {
@@ -61,7 +65,8 @@ li:after {
 
 .link-top {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 10px;
+  text-align: center;
   width: 100px;
 }
 
@@ -77,10 +82,15 @@ ul {
 
 /* layout */
 
+#main {
+  /* border: 1px solid purple; */
+  margin: 0;
+  padding: 0;
+}
+
 main {
-  /* border: 1px solid blue; */
   display: grid;
-  grid-template-columns: 94vw;
+  grid-template-columns: 86vw;
   grid-template-rows: repeat(3, max-content);
   grid-row-gap: 10px;
   width: 100%;

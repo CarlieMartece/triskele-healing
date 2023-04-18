@@ -223,7 +223,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+figure {
+  display: flex;
+  justify-content: center;
+}
+img {
+  margin: auto;
+}
 #special-offers {
   text-align: center;
 }
@@ -235,5 +242,13 @@ export default {
 }
 #special-offers ul {
   margin-top: 0;
+}
+.upper-left {
+  display: flex;
+  justify-content: center;
+}
+.upper-left img {
+  max-height: 314px;
+  max-width: 314px;
 }
 </style>

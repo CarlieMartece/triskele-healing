@@ -1,20 +1,22 @@
 <template>
-  <header>
-    <h1>Triskele Healing</h1>
-    <nav>
-      <router-link
-        class="nav-item"
-        v-for="page in navPages"
-        :key="page.id"
-        :to="page.slug"
-      >
-        <img :src="`/images/${page.image}.jpg`" :alt="page.alt" />
-        <p>{{ page.name }}</p>
-      </router-link>
-    </nav>
-  </header>
   <div id="container">
-    <router-view />
+    <header>
+      <h1>Triskele Healing</h1>
+      <nav>
+        <router-link
+          class="nav-item"
+          v-for="page in navPages"
+          :key="page.id"
+          :to="page.slug"
+        >
+          <img :src="`/images/${page.image}.jpg`" :alt="page.alt" />
+          <p>{{ page.name }}</p>
+        </router-link>
+      </nav>
+    </header>
+    <div id="main">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -74,10 +76,12 @@ a {
   text-decoration: none;
 }
 header {
+  background-color: white;
   display: block;
   height: 141px;
   margin: 0 auto;
-  width: 340px;
+  max-width: 800px;
+  width: 100%;
 }
 img {
   width: 66px;
@@ -100,5 +104,27 @@ p {
   line-height: 5px;
   text-align: center;
   width: 66px;
+}
+
+@media screen and (min-width: 650px) {
+  header {
+    height: 191px;
+  }
+  img {
+    width: 106px;
+  }
+  nav {
+    height: 130px;
+    width: 540px;
+  }
+  .nav-item {
+    height: 128px;
+    margin: 1px;
+  }
+  p {
+    font-size: 1.2em;
+    line-height: 15px;
+    width: 106px;
+  }
 }
 </style>
