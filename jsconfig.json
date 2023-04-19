@@ -9,11 +9,13 @@
         "src/*"
       ]
     },
-    "lib": [
+    "lib": [ 
       "esnext",
       "dom",
       "dom.iterable",
       "scripthost"
-    ]
+    ],
+    "noImplicitAny": false,
+    "allowJs": true
   }
 }
