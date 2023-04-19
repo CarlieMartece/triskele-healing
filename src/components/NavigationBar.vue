@@ -39,7 +39,7 @@ a {
 header {
   background-color: white;
   display: block;
-  height: 191px;
+  grid-area: 1 / 1 / 2 / 2;
   margin: 0 auto;
   max-width: 800px;
   width: 100%;

@@ -1,8 +1,8 @@
 <template>
-  <div id="container">
+  <div id="app">
     <NavigationBar v-if="windowWidth > 650" />
     <NavSlider v-else />
-    <div id="main">
+    <div id="container">
       <router-view />
     </div>
   </div>

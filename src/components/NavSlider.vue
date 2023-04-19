@@ -41,7 +41,8 @@ a {
   color: aliceblue;
 }
 header {
-  height: 79px;
+  background-color: white;
+  grid-area: 1 / 1 / 2 / 2;
 }
 img {
   border: 1px solid aliceblue;
