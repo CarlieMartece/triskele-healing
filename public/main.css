@@ -32,11 +32,11 @@
 
 #container {
   background-color: white;
-  height: 96vh;
+  height: 95vh;
   margin: 0 auto;
   max-width: 800px;
   overflow-y: scroll;
-  padding: 0 4vw 4vh;
+  padding: 1vh 4vw 4vh;
   width: 88vw;
 }
 
