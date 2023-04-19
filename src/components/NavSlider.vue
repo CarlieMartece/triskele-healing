@@ -34,7 +34,30 @@ export default {
 </script>
 
 <style scoped>
+* {
+  display: block;
+}
+a {
+  color: aliceblue;
+}
 header {
   height: 79px;
+}
+img {
+  border: 1px solid aliceblue;
+  border-radius: 2px;
+  display: inline;
+  height: 79px;
+}
+.nav-item {
+  align-items: center;
+  display: flex;
+  height: 101px;
+  justify-content: left;
+  width: 220px;
+}
+p {
+  display: inline;
+  margin-left: 20px;
 }
 </style>
