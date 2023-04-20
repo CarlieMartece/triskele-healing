@@ -24,9 +24,9 @@
       </ul>
     </section>
 
-    <div class="lower-full" id="courses-info">
+    <section class="lower-full" id="courses-info">
       <break-bar></break-bar>
-      <section id="course-ear-candling">
+      <article id="course-ear-candling">
         <h2>Ear Candling</h2>
         <p>
           This fascinating therapy has gained popularity in recent years as we
@@ -60,8 +60,8 @@
           for 5 CPD points.
         </p>
         <break-bar></break-bar>
-      </section>
-      <section id="course-indian-massage">
+      </article>
+      <article id="course-indian-massage">
         <h2>Indian Head Massage</h2>
         <p>
           Indian Head Massage is highly effective, convenient and one of the
@@ -107,8 +107,8 @@
           </li>
         </ul>
         <break-bar></break-bar>
-      </section>
-      <section id="course-natural-facial">
+      </article>
+      <article id="course-natural-facial">
         <h2>Natural Facial</h2>
         <p>
           On this popular course you will learn a truly natural facial
@@ -155,11 +155,11 @@
           Reflexology, Indian Head Massage, beauty therapy etc.
         </p>
         <break-bar></break-bar>
-      </section>
+      </article>
       <h2>
         Please <a href="contact.htm">contact</a> me for dates of upcoming
         courses.
       </h2>
-    </div>
+    </section>
   </main>
 </template>

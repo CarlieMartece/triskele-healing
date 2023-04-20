@@ -30,8 +30,8 @@
       </nav>
     </section>
 
-    <div class="lower-full">
-      <section id="special-offers">
+    <section class="lower-full">
+      <article id="special-offers">
         <ul id="offers-list">
           <li>
             <h3>Special Offer</h3>
@@ -47,9 +47,9 @@
           </li>
         </ul>
         <break-bar></break-bar>
-      </section>
+      </article>
 
-      <section
+      <article
         v-for="treatment in treatments"
         :key="treatment.id"
         :id="treatment.name"
@@ -60,11 +60,11 @@
           {{ paragraph.info }}
         </p>
         <break-bar-small></break-bar-small>
-      </section>
+      </article>
 
       <a class="link-top" href="treatments">Back to Top</a>
       <break-bar></break-bar>
-    </div>
+    </section>
   </main>
 </template>
 
