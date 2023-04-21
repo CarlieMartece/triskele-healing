@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>Triskele Healing</h1>
-    <Slide>
+    <Slide :closeOnNavigation="true">
       <nav>
         <router-link
           class="nav-item"
@@ -28,6 +28,8 @@ export default {
   data() {
     return {
       navData,
+      slideWidth: "400px",
+      isOpen: false,
     };
   },
 };
