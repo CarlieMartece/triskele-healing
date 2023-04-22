@@ -4,16 +4,14 @@
   outline: 0;
   overflow: hidden;
   padding: 0;
-  vertical-align: baseline;
 }
 
 #app {
-  /* border: 1px solid red; */
   background-color: #357960;
   color: #2c3e50;
   display: grid;
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  grid-template-columns: 88vw;;
+  grid-template-columns: 88vw;
   grid-template-rows: 100px 1fr;
   height: 100vh;
   margin: 0 auto;
@@ -23,36 +21,39 @@
   -webkit-font-smoothing: antialiased;
   width: 96vw;
 }
-
-.center {
+@media screen and (min-width: 650px) {
+  #app {
+    grid-template-rows: 190px 1fr;
+  }
+}
+#app header h1 {
+  text-align: center;
+}
+#app #container {
+  background-color: white;
+  grid-area: 2/1/3/2;
+  margin: 0 auto;
+  max-width: 800px;
+  overflow-y: scroll;
+  width: 100%;
+}
+#app #container .center {
   border: 1px solid #2c3e50;
   border-radius: 5px;
   display: block;
   margin: 10px auto;
   width: 90%;
 }
-
-#container {
-  background-color: white;
-  grid-area: 2 / 1 / 3 / 2;
-  margin: 0 auto;
-  max-width: 800px;
-  overflow-y: scroll;
-  width: 100%;
-}
-
-h1 {
+#app #container h1 {
   text-align: center;
 }
-
-li {
+#app #container li {
   margin: 0;
   margin-bottom: 0.5em;
   padding-left: 1.5em;
   position: relative;
 }
-
-li:after {
+#app #container li:after {
   content: "";
   height: 0.4em;
   width: 0.4em;
@@ -63,74 +64,65 @@ li:after {
   top: 0.25em;
   left: 0;
 }
-
-.link-top {
+#app #container .link-top {
   display: block;
   margin: 0 auto 10px;
   text-align: center;
   width: 100px;
 }
-
-section {
-  width: 100%;
-}
-
-ul {
+#app #container ul {
   list-style: none;
   margin: 1em;
   padding: 0;
 }
-
-/* layout */
-
-main {
+#app #container main {
   display: grid;
   grid-template-columns: 86vw;
   grid-template-rows: repeat(3, max-content);
   grid-row-gap: 10px;
   width: 100%;
 }
-
-.upper-left {
-  grid-area: 1 / 1 / 2 / 2;
+#app #container main .upper-left {
+  grid-area: 1/1/2/2;
 }
-.upper-right {
-  grid-area: 2 / 1 / 3 / 2;
+#app #container main .upper-right {
+  grid-area: 2/1/3/2;
 }
-.lower-full {
-  grid-area: 3 / 1 / 4 / 2;
+#app #container main .lower-full {
+  grid-area: 3/1/4/2;
 }
-.lower-split {
-  grid-area: 3 / 1 / 4 / 2;
+#app #container main .lower-split {
+  grid-area: 3/1/4/2;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, 1fr);
 }
-.lower-left { grid-area: 1 / 1 / 2 / 2; }
-.lower-right { grid-area: 2 / 1 / 3 / 2; }
-
+#app #container main .lower-left {
+  grid-area: 1/1/2/2;
+}
+#app #container main .lower-right {
+  grid-area: 2/1/3/2;
+}
 @media screen and (min-width: 650px) {
-  #app {
-    grid-template-rows: 190px 1fr;
-  }
-  main {
+  #app #container main {
     grid-template-columns: 360px 1fr;
     grid-template-rows: repeat(2, max-content);
     grid-column-gap: 10px;
   }
-  .upper-left {
-    grid-area: 1 / 1 / 2 / 2;
+  #app #container main .upper-right {
+    grid-area: 1/2/2/3;
   }
-  .upper-right {
-    grid-area: 1 / 2 / 2 / 3;
+  #app #container main .lower-full {
+    grid-area: 2/1/3/3;
   }
-  .lower-full {
-    grid-area: 2 / 1 / 3 / 3;
-  }
-  .lower-split {
-    grid-area: 2 / 1 / 3 / 3;
+  #app #container main .lower-split {
+    grid-area: 2/1/3/3;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
   }
-  .lower-right { grid-area: 1 / 2 / 2 / 3; }
+  #app #container main .lower-right {
+    grid-area: 1/2/2/3;
+  }
 }
+
+/*# sourceMappingURL=main.css.map */
