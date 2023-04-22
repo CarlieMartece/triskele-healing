@@ -222,33 +222,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-figure {
-  display: flex;
-  justify-content: center;
-}
-img {
-  margin: auto;
-}
-#special-offers {
-  text-align: center;
-}
-#special-offers li {
-  padding-left: 0;
-}
-#special-offers li:after {
-  background: white;
-}
-#special-offers ul {
-  margin-top: 0;
-}
-.upper-left {
-  display: flex;
-  justify-content: center;
-}
-.upper-left img {
-  max-height: 314px;
-  max-width: 314px;
-}
-</style>

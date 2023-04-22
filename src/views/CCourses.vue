@@ -156,10 +156,10 @@
         </p>
         <break-bar></break-bar>
       </article>
-      <h2>
+      <h3>
         Please <a href="contact.htm">contact</a> me for dates of upcoming
         courses.
-      </h2>
+      </h3>
     </section>
   </main>
 </template>

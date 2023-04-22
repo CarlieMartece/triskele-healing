@@ -26,8 +26,72 @@
     grid-template-rows: 190px 1fr;
   }
 }
-#app header h1 {
+#app #NavBar {
+  background-color: white;
+  display: block;
+  grid-area: 1/1/2/2;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+}
+#app #NavBar a {
+  color: black;
+  text-decoration: none;
+}
+#app #NavBar h1 {
   text-align: center;
+}
+#app #NavBar img {
+  width: 106px;
+}
+#app #NavBar nav {
+  height: 130px;
+  margin: 0 auto;
+  width: 540px;
+}
+#app #NavBar .nav-item {
+  display: inline;
+  float: left;
+  height: 128px;
+  list-style-type: none;
+  margin: 1px;
+}
+#app #NavBar p {
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 15px;
+  text-align: center;
+  width: 106px;
+}
+#app #NavSlider {
+  background-color: white;
+  grid-area: 1/1/2/2;
+}
+#app #NavSlider * {
+  display: block;
+}
+#app #NavSlider a {
+  color: aliceblue;
+}
+#app #NavSlider h1 {
+  text-align: center;
+}
+#app #NavSlider img {
+  border: 1px solid aliceblue;
+  border-radius: 2px;
+  display: inline;
+  height: 79px;
+}
+#app #NavSlider .nav-item {
+  align-items: center;
+  display: flex;
+  height: 101px;
+  justify-content: left;
+  width: 220px;
+}
+#app #NavSlider p {
+  display: inline;
+  margin-left: 20px;
 }
 #app #container {
   background-color: white;
@@ -41,8 +105,12 @@
   border: 1px solid #2c3e50;
   border-radius: 5px;
   display: block;
-  margin: 10px auto;
+  margin: auto;
   width: 90%;
+}
+#app #container figure {
+  display: flex;
+  justify-content: center;
 }
 #app #container h1 {
   text-align: center;
@@ -81,6 +149,26 @@
   grid-template-rows: repeat(3, max-content);
   grid-row-gap: 10px;
   width: 100%;
+}
+#app #container main #treatments #special-offers {
+  text-align: center;
+}
+#app #container main #treatments #special-offers li {
+  padding-left: 0;
+}
+#app #container main #treatments #special-offers li:after {
+  background: white;
+}
+#app #container main #treatments #special-offers ul {
+  margin-top: 0;
+}
+#app #container main #treatments .upper-left {
+  display: flex;
+  justify-content: center;
+}
+#app #container main #treatments .upper-left img {
+  max-height: 314px;
+  max-width: 314px;
 }
 #app #container main .upper-left {
   grid-area: 1/1/2/2;
