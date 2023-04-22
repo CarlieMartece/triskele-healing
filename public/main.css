@@ -84,8 +84,8 @@
 }
 #content header #NavSlider h1 {
   font-size: 2.5em;
-  margin-left: 15px;
-  margin-top: 15px;
+  margin-left: 40px;
+  margin-top: 20px;
 }
 #content header #NavSlider img {
   border: 1px solid aliceblue;
@@ -128,7 +128,10 @@
   border-radius: 5px;
   display: block;
   margin: auto;
-  width: 90%;
+  width: 95%;
+}
+#content #container main figcaption {
+  margin-top: 5px;
 }
 #content #container main li {
   margin: 0;
@@ -138,14 +141,15 @@
 }
 #content #container main li:after {
   content: "";
-  height: 0.4em;
-  width: 0.4em;
   background: #357960;
   display: block;
-  position: absolute;
-  transform: rotate(45deg);
-  top: 0.25em;
+  height: 0.5em;
   left: 0;
+  margin-left: 3px;
+  position: absolute;
+  top: 0.4em;
+  transform: rotate(45deg);
+  width: 0.5em;
 }
 #content #container main .link-top {
   display: block;
@@ -155,7 +159,7 @@
 }
 #content #container main ul {
   list-style: none;
-  margin: 1em;
+  margin: 5px;
   padding: 0;
 }
 #content #container main #treatments #special-offers {
@@ -174,12 +178,11 @@
   display: flex;
   justify-content: center;
 }
-#content #container main #treatments .upper-left img {
-  max-height: 314px;
-  max-width: 314px;
-}
 #content #container main .upper-left {
   grid-area: 1/1/2/2;
+}
+#content #container main .upper-left img {
+  max-width: 400px;
 }
 #content #container main .upper-right {
   grid-area: 2/1/3/2;
@@ -203,6 +206,9 @@
     grid-template-columns: 230px 1fr;
     grid-template-rows: repeat(2, max-content);
     grid-column-gap: 10px;
+  }
+  #content #container main .upper-left img {
+    max-width: 230px;
   }
   #content #container main .upper-right {
     grid-area: 1/2/2/3;
