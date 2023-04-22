@@ -1,5 +1,5 @@
 <template>
-  <header id="NavBar">
+  <div id="NavBar">
     <h1>Triskele Healing</h1>
     <nav>
       <router-link
@@ -12,7 +12,7 @@
         <p>{{ page.name }}</p>
       </router-link>
     </nav>
-  </header>
+  </div>
 </template>
 
 <script>

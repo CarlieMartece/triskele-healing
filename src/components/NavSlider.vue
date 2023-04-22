@@ -1,5 +1,5 @@
 <template>
-  <header id="NavSlider">
+  <div id="NavSlider">
     <h1>Triskele Healing</h1>
     <Slide :closeOnNavigation="true">
       <nav>
@@ -14,7 +14,7 @@
         </router-link>
       </nav>
     </Slide>
-  </header>
+  </div>
 </template>
 
 <script>

@@ -1,7 +1,9 @@
 <template>
-  <div id="app">
-    <NavBar v-if="windowWidth > 650" />
-    <NavSlider v-else />
+  <div id="content">
+    <header>
+      <NavBar v-if="windowWidth > 650" />
+      <NavSlider v-else />
+    </header>
     <div id="container">
       <router-view />
     </div>
