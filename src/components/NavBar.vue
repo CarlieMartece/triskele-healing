@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="NavBar">
     <h1>Triskele Healing</h1>
     <nav>
       <router-link

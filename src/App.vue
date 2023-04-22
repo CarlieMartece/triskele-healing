@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavigationBar v-if="windowWidth > 650" />
+    <NavBar v-if="windowWidth > 650" />
     <NavSlider v-else />
     <div id="container">
       <router-view />
@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import NavigationBar from "./components/NavigationBar.vue";
+import NavBar from "./components/NavBar.vue";
 import NavSlider from "./components/NavSlider.vue";
 
 export default {
   components: {
-    NavigationBar,
+    NavBar,
     NavSlider,
   },
   data() {
