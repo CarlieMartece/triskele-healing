@@ -1,5 +1,5 @@
 <template>
-  <main id="contact">
+  <main>
     <div class="upper-left">
       <h2>Contact Details</h2>
       <ul>
@@ -10,7 +10,7 @@
           as possible.
         </li>
       </ul>
-      <break-bar-small></break-bar-small>
+      <BreakBarSmall />
     </div>
     <div class="upper-right">
       <h2>Contact Form</h2>
@@ -20,41 +20,40 @@
         action="../lite_process.php"
         onsubmit="return validate.check(this)"
       >
-        <ul>
-          <label for="name">Full Name:</label
-          ><input id="name" maxLength="80" name="name" size="35" type="text" />
-        </ul>
-        <ul>
-          <label for="email">Email Address:</label
-          ><input
-            id="email"
-            maxLength="100"
-            name="email"
-            size="35"
-            type="text"
-          />
-        </ul>
-        <ul>
-          <label for="message">Your Message:</label
-          ><textarea
-            id="message"
-            maxLength="1000"
-            name="message"
-            style="width: 242px; height: 120px"
-          ></textarea>
-        </ul>
-        <ul>
-          <input type="submit" value="Submit Form" />
+        <ul id="contact-form">
+          <li>
+            <label for="name">Full Name:</label>
+            <input id="name" maxLength="80" name="name" size="35" type="text" />
+          </li>
+          <li>
+            <label for="email">Email Address:</label>
+            <input
+              id="email"
+              maxLength="100"
+              name="email"
+              size="35"
+              type="text"
+            />
+          </li>
+          <li>
+            <label for="message">Your Message:</label>
+            <textarea
+              id="message"
+              maxLength="1000"
+              name="message"
+              style="width: 242px; height: 120px"
+            >
+            </textarea>
+          </li>
+          <li>
+            <input type="submit" value="Submit Form" />
+          </li>
         </ul>
       </form>
     </div>
     <div class="lower-full">
       <figure>
-        <img
-          alt="Peaceful waterlily painting."
-          class="center"
-          src="../assets/2009.jpg"
-        />
+        <img alt="Peaceful waterlily painting." src="../assets/2009.jpg" />
       </figure>
     </div>
   </main>

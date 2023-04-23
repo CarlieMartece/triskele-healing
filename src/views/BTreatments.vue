@@ -1,10 +1,9 @@
 <template>
   <main>
-    <div class="upper-left treatments">
+    <div class="upper-left">
       <figure>
         <img
           alt="meditating figure with rainbow chakras"
-          class="center"
           src="../assets/2016.jpg"
         />
       </figure>
@@ -31,7 +30,7 @@
     </section>
 
     <section class="lower-full">
-      <article class="special-offers">
+      <article id="special-offers">
         <ul>
           <li>
             <h3>Special Offer</h3>

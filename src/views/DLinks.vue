@@ -1,5 +1,5 @@
 <template>
-  <main id="links">
+  <main>
     <div class="upper-left">
       <figure>
         <img
@@ -23,7 +23,7 @@
         >
         for full art portfolio.
       </p>
-      <break-bar-small></break-bar-small>
+      <BreakBarSmall />
     </section>
     <div class="lower-split">
       <section class="lower-left">
@@ -41,7 +41,7 @@
             >
           </li>
         </ul>
-        <break-bar></break-bar>
+        <BreakBar />
         <h2>Other holistic therapists:</h2>
         <ul>
           <li>
@@ -56,6 +56,7 @@
               >www.holistictherapiesireland.com</a
             >
           </li>
+          <BreakBarSmall />
         </ul>
       </section>
       <div class="lower-right">
@@ -72,10 +73,12 @@
 </template>
 
 <script>
+import BreakBar from "../components/BreakBar.vue";
 import BreakBarSmall from "../components/BreakBarSmall.vue";
 
 export default {
   components: {
+    BreakBar,
     BreakBarSmall,
   },
 };

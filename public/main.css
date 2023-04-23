@@ -126,12 +126,22 @@
 #content #container main a:link {
   color: #2c3e50;
 }
+#content #container main .bookings {
+  display: block;
+  margin: 0 auto 10px;
+  text-align: center;
+  width: 90%;
+}
 #content #container main .break {
   margin: 25px auto;
+}
+#content #container main #contact-form li {
+  all: unset;
 }
 #content #container main img {
   display: block;
   margin: 10px auto;
+  max-width: 616px;
 }
 #content #container main figure img {
   border: 1px solid #2c3e50;
@@ -157,21 +167,15 @@
   transform: rotate(45deg);
   width: 0.5em;
 }
-#content #container main .bookings {
-  display: block;
-  margin: 0 auto 10px;
-  text-align: center;
-  width: 90%;
-}
 #content #container main ul {
   list-style: none;
   margin: 5px;
   padding: 0;
 }
-#content #container main .special-offers {
+#content #container main #special-offers {
   text-align: center;
 }
-#content #container main .special-offers li {
+#content #container main #special-offers li {
   all: unset;
 }
 #content #container main .treatments li {

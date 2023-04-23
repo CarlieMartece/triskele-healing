@@ -1,5 +1,5 @@
 <template>
-  <main id="courses">
+  <main>
     <div class="upper-left">
       <figure>
         <img
@@ -25,7 +25,7 @@
     </section>
 
     <section class="lower-full" id="courses-info">
-      <break-bar></break-bar>
+      <BreakBar />
       <article id="course-ear-candling">
         <h2>Ear Candling</h2>
         <p>
@@ -59,7 +59,7 @@
           This course provides a professional qualification and is recognised
           for 5 CPD points.
         </p>
-        <break-bar></break-bar>
+        <BreakBarSmall />
       </article>
       <article id="course-indian-massage">
         <h2>Indian Head Massage</h2>
@@ -106,7 +106,7 @@
             </p>
           </li>
         </ul>
-        <break-bar></break-bar>
+        <BreakBarSmall />
       </article>
       <article id="course-natural-facial">
         <h2>Natural Facial</h2>
@@ -154,12 +154,28 @@
           one or more of the following skills: Aromatherapy, Massage,
           Reflexology, Indian Head Massage, beauty therapy etc.
         </p>
-        <break-bar></break-bar>
+        <BreakBarSmall />
       </article>
-      <h3>
-        Please <a href="contact.htm">contact</a> me for dates of upcoming
-        courses.
-      </h3>
+      <article class="bookings">
+        <h2>Bookings</h2>
+        <p>
+          Please <a href="contact">contact</a> me for dates of upcoming courses.
+        </p>
+        <BreakBar />
+      </article>
     </section>
   </main>
 </template>
+
+<script>
+import BreakBar from "../components/BreakBar.vue";
+import BreakBarSmall from "../components/BreakBarSmall.vue";
+
+export default {
+  name: "App",
+  components: {
+    BreakBar,
+    BreakBarSmall,
+  },
+};
+</script>

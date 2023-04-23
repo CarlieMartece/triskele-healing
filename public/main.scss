@@ -1,9 +1,6 @@
 $tabScreen: 650px;
 $mainColor: #357960;
 $textColor: #2c3e50;
-@mixin borderCheck($color: red) {
-  border: 1px solid $color;
-}
 
 * {
   background: transparent;
@@ -134,13 +131,27 @@ $textColor: #2c3e50;
         color: $textColor;
       }
 
+      .bookings {
+        display: block;
+        margin: 0 auto 10px;
+        text-align: center;
+        width: 90%;
+      }
+
       .break {
         margin: 25px auto;
+      }
+
+      #contact-form {
+        li {
+            all: unset;
+        }
       }
 
       img {
         display: block;
         margin: 10px auto;
+        max-width: 616px;
       }
 
       figure img {
@@ -170,20 +181,13 @@ $textColor: #2c3e50;
         width: 0.5em;
       }
 
-      .bookings {
-        display: block;
-        margin: 0 auto 10px;
-        text-align: center;
-        width: 90%;
-      }
-
       ul {
         list-style: none;
         margin: 5px;
         padding: 0;
       }
 
-      .special-offers {
+      #special-offers {
         text-align: center;
         li {
           all: unset;
