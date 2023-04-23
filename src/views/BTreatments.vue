@@ -1,6 +1,6 @@
 <template>
-  <main id="treatments">
-    <div class="upper-left">
+  <main>
+    <div class="upper-left treatments">
       <figure>
         <img
           alt="meditating figure with rainbow chakras"
@@ -10,9 +10,9 @@
       </figure>
     </div>
 
-    <section class="upper-right">
+    <section class="upper-right treatments">
       <h2>Treatments</h2>
-      <nav id="nav-treatments">
+      <nav>
         <ul>
           <li>
             <a href="#ayurvedic">Ayurvedic Kansa Vatki (KV) Foot Massage™</a>
@@ -31,8 +31,8 @@
     </section>
 
     <section class="lower-full">
-      <article id="special-offers">
-        <ul id="offers-list">
+      <article class="special-offers">
+        <ul>
           <li>
             <h3>Special Offer</h3>
             <p>Book a course of six treatments, get one free!</p>
@@ -46,7 +46,7 @@
             </p>
           </li>
         </ul>
-        <break-bar></break-bar>
+        <BreakBar />
       </article>
 
       <article
@@ -59,11 +59,17 @@
         <p v-for="paragraph in treatment.details" :key="paragraph.no">
           {{ paragraph.info }}
         </p>
-        <break-bar-small></break-bar-small>
+        <BreakBarSmall />
       </article>
 
-      <a class="link-top" href="treatments">Back to Top</a>
-      <break-bar></break-bar>
+      <article class="bookings">
+        <h2>Bookings</h2>
+        <p>
+          Please <a href="contact">contact</a> me for more details or to arrange
+          a booking.
+        </p>
+        <BreakBar />
+      </article>
     </section>
   </main>
 </template>

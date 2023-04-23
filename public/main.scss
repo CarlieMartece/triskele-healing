@@ -1,4 +1,6 @@
 $tabScreen: 650px;
+$mainColor: #357960;
+$textColor: #2c3e50;
 @mixin borderCheck($color: red) {
   border: 1px solid $color;
 }
@@ -12,7 +14,7 @@ $tabScreen: 650px;
 }
 
 #app {
-  background-color: #357960;
+  background-color: $mainColor;
   height: 100vh;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
@@ -21,7 +23,7 @@ $tabScreen: 650px;
 }
 
 #content {
-  color: #2c3e50;
+  color: $textColor;
   display: grid;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   grid-template-columns: 100%;
@@ -50,7 +52,7 @@ $tabScreen: 650px;
       max-width: 800px;
       width: 100%;
       a {
-        color: black;
+        color: $textColor;
         text-decoration: none;
       }
       img {
@@ -128,16 +130,24 @@ $tabScreen: 650px;
       grid-template-rows: repeat(3, max-content);
       grid-row-gap: 10px;
 
-      .center {
-        border: 1px solid #2c3e50;
-        border-radius: 5px;
-        display: block;
-        margin: auto;
-        width: 95%;
+      a:link {
+        color: $textColor;
       }
 
-      figcaption {
-        margin-top: 5px;
+      .break {
+        margin: 25px auto;
+      }
+
+      img {
+        display: block;
+        margin: 10px auto;
+      }
+
+      figure img {
+        border: 1px solid $textColor;
+        border-radius: 5px;
+        vertical-align: middle;
+        width: 95%;
       }
 
       li {
@@ -160,11 +170,11 @@ $tabScreen: 650px;
         width: 0.5em;
       }
 
-      .link-top {
+      .bookings {
         display: block;
         margin: 0 auto 10px;
         text-align: center;
-        width: 100px;
+        width: 90%;
       }
 
       ul {
@@ -173,29 +183,24 @@ $tabScreen: 650px;
         padding: 0;
       }
 
-      #treatments {
-        #special-offers {
-          text-align: center;
+      .special-offers {
+        text-align: center;
+        li {
+          all: unset;
         }
-        #special-offers li {
-          padding-left: 0;
-        }
-        #special-offers li:after {
-          background: white;
-        }
-        #special-offers ul {
-          margin-top: 0;
-        }
-        .upper-left {
-          display: flex;
-          justify-content: center;
-        }
+      }
+
+      .treatments li {
+        display: inline;
+        float: left;
+        width: 170px;
       }
 
       .upper-left {
         grid-area: 1 / 1 / 2 / 2;
         img {
-            max-width: 400px;
+          margin: 5px auto;
+          max-width: 400px;
         }
       }
       .upper-right {
@@ -222,10 +227,10 @@ $tabScreen: 650px;
         grid-column-gap: 10px;
 
         .upper-left {
-            img {
-                max-width: 230px;
-            }
+          img {
+            max-width: 230px;
           }
+        }
         .upper-right {
           grid-area: 1 / 2 / 2 / 3;
         }

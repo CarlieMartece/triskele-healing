@@ -47,7 +47,7 @@
   width: 100%;
 }
 #content header #NavBar a {
-  color: black;
+  color: #2c3e50;
   text-decoration: none;
 }
 #content header #NavBar img {
@@ -123,15 +123,21 @@
   grid-template-rows: repeat(3, max-content);
   grid-row-gap: 10px;
 }
-#content #container main .center {
+#content #container main a:link {
+  color: #2c3e50;
+}
+#content #container main .break {
+  margin: 25px auto;
+}
+#content #container main img {
+  display: block;
+  margin: 10px auto;
+}
+#content #container main figure img {
   border: 1px solid #2c3e50;
   border-radius: 5px;
-  display: block;
-  margin: auto;
+  vertical-align: middle;
   width: 95%;
-}
-#content #container main figcaption {
-  margin-top: 5px;
 }
 #content #container main li {
   margin: 0;
@@ -151,37 +157,33 @@
   transform: rotate(45deg);
   width: 0.5em;
 }
-#content #container main .link-top {
+#content #container main .bookings {
   display: block;
   margin: 0 auto 10px;
   text-align: center;
-  width: 100px;
+  width: 90%;
 }
 #content #container main ul {
   list-style: none;
   margin: 5px;
   padding: 0;
 }
-#content #container main #treatments #special-offers {
+#content #container main .special-offers {
   text-align: center;
 }
-#content #container main #treatments #special-offers li {
-  padding-left: 0;
+#content #container main .special-offers li {
+  all: unset;
 }
-#content #container main #treatments #special-offers li:after {
-  background: white;
-}
-#content #container main #treatments #special-offers ul {
-  margin-top: 0;
-}
-#content #container main #treatments .upper-left {
-  display: flex;
-  justify-content: center;
+#content #container main .treatments li {
+  display: inline;
+  float: left;
+  width: 170px;
 }
 #content #container main .upper-left {
   grid-area: 1/1/2/2;
 }
 #content #container main .upper-left img {
+  margin: 5px auto;
   max-width: 400px;
 }
 #content #container main .upper-right {

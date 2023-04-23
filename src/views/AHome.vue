@@ -1,11 +1,10 @@
 <template>
-  <main id="home">
+  <main>
     <section class="upper-left">
       <h2>Maggie Mc Ateer</h2>
       <p>CThA, LCICI, VTCT</p>
       <figure>
         <img
-          class="center"
           src="../assets/maggie-mcateer.jpg"
           alt="Maggie McAteer, complementary therapist"
         />
