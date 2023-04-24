@@ -135,8 +135,38 @@
 #content #container main .break {
   margin: 25px auto;
 }
+#content #container main #contact-form {
+  margin: 5px auto 0;
+  max-width: 390px;
+  width: 90%;
+}
+#content #container main #contact-form * {
+  border: 1px solid #2c3e50;
+  border-radius: 3px;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  width: 250px;
+}
 #content #container main #contact-form li {
   all: unset;
+}
+#content #container main #contact-form .question {
+  border: none;
+  margin: 0;
+  width: 120px;
+}
+#content #container main #contact-form .message {
+  height: 120px;
+}
+#content #container main #contact-form .submit {
+  width: 90px;
+}
+@media screen and (min-width: 650px) {
+  #content #container main #contact-form .submit {
+    margin-left: 120px;
+  }
 }
 #content #container main img {
   display: block;
@@ -209,9 +239,9 @@
 }
 @media screen and (min-width: 650px) {
   #content #container main {
-    grid-template-columns: 230px 1fr;
+    grid-template-columns: 250px 1fr;
     grid-template-rows: repeat(2, max-content);
-    grid-column-gap: 10px;
+    grid-column-gap: 20px;
   }
   #content #container main .upper-left img {
     max-width: 230px;

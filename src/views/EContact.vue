@@ -22,12 +22,20 @@
       >
         <ul id="contact-form">
           <li>
-            <label for="name">Full Name:</label>
-            <input id="name" maxLength="80" name="name" size="35" type="text" />
+            <label class="question" for="name">Full Name:</label>
+            <input
+              class="answer"
+              id="name"
+              maxLength="80"
+              name="name"
+              size="35"
+              type="text"
+            />
           </li>
           <li>
-            <label for="email">Email Address:</label>
+            <label class="question" for="email">Email Address:</label>
             <input
+              class="answer"
               id="email"
               maxLength="100"
               name="email"
@@ -36,17 +44,17 @@
             />
           </li>
           <li>
-            <label for="message">Your Message:</label>
+            <label class="question" for="message">Your Message:</label>
             <textarea
+              class="message"
               id="message"
               maxLength="1000"
               name="message"
-              style="width: 242px; height: 120px"
             >
             </textarea>
           </li>
           <li>
-            <input type="submit" value="Submit Form" />
+            <input class="submit" type="submit" value="Submit Form" />
           </li>
         </ul>
       </form>
