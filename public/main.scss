@@ -1,6 +1,7 @@
 $tabScreen: 650px;
-$mainColor: #357960;
-$textColor: #2c3e50;
+$lightColor: aliceblue;
+$medColor: #357960;
+$darkColor: #2c3e50;
 
 * {
   background: transparent;
@@ -11,7 +12,7 @@ $textColor: #2c3e50;
 }
 
 #app {
-  background-color: $mainColor;
+  background-color: $medColor;
   height: 100vh;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
@@ -20,7 +21,7 @@ $textColor: #2c3e50;
 }
 
 #content {
-  color: $textColor;
+  color: $darkColor;
   display: grid;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   grid-template-columns: 100%;
@@ -49,7 +50,7 @@ $textColor: #2c3e50;
       max-width: 800px;
       width: 100%;
       a {
-        color: $textColor;
+        color: $darkColor;
         text-decoration: none;
       }
       img {
@@ -83,7 +84,7 @@ $textColor: #2c3e50;
         display: block;
       }
       a {
-        color: aliceblue;
+        color: $lightColor;
       }
       h1 {
         font-size: 2.5em;
@@ -91,7 +92,7 @@ $textColor: #2c3e50;
         margin-top: 20px;
       }
       img {
-        border: 1px solid aliceblue;
+        border: 1px solid $lightColor;
         border-radius: 2px;
         display: inline;
         height: 79px;
@@ -128,7 +129,7 @@ $textColor: #2c3e50;
       grid-row-gap: 10px;
 
       a:link {
-        color: $textColor;
+        color: $darkColor;
       }
 
       .bookings {
@@ -145,15 +146,15 @@ $textColor: #2c3e50;
       #contact-form {
         margin: 5px auto 0;
         max-width: 390px;
-        width: 90%;
+        width: 95%;
         * {
-          border: 1px solid $textColor;
+          border: 1px solid $darkColor;
           border-radius: 3px;
           float: left;
           height: 30px;
           line-height: 30px;
           margin-bottom: 10px;
-          width: 250px;
+          width: 99%;
         }
         li {
           all: unset;
@@ -167,9 +168,13 @@ $textColor: #2c3e50;
           height: 120px;
         }
         .submit {
+          background-color: $lightColor;
           width: 90px;
         }
         @media screen and (min-width: $tabScreen) {
+          * {
+            width: 250px;
+          }
           .submit {
             margin-left: 120px;
           }
@@ -183,7 +188,7 @@ $textColor: #2c3e50;
       }
 
       figure img {
-        border: 1px solid $textColor;
+        border: 1px solid $darkColor;
         border-radius: 5px;
         vertical-align: middle;
         width: 95%;
@@ -198,7 +203,7 @@ $textColor: #2c3e50;
 
       li:after {
         content: "";
-        background: #357960;
+        background: $medColor;
         display: block;
         height: 0.5em;
         left: 0;
