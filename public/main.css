@@ -26,6 +26,11 @@
   max-width: 800px;
   width: 90vw;
 }
+@media screen and (max-width: 345px) {
+  #content {
+    grid-template-rows: 160px 1fr;
+  }
+}
 @media screen and (min-width: 650px) {
   #content {
     grid-template-rows: 210px 1fr;
@@ -103,6 +108,11 @@
 #content header #NavSlider p {
   display: inline;
   margin-left: 20px;
+}
+@media screen and (max-width: 345px) {
+  #content header #NavSlider h1 {
+    margin-left: 60px;
+  }
 }
 #content #container {
   background-color: white;
