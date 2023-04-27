@@ -14,12 +14,7 @@
     </div>
     <div class="upper-right">
       <h2>Contact Form</h2>
-      <form
-        name="contactformlite"
-        method="post"
-        action="../lite_process.php"
-        onsubmit="return validate.check(this)"
-      >
+      <form method="post" action="../send-email.php">
         <ul id="contact-form">
           <li>
             <label class="question" for="name">Full Name:</label>
