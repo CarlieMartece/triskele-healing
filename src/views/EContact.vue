@@ -14,22 +14,18 @@
     </div>
     <div class="upper-right">
       <h2>Contact Form</h2>
-      <form
-        name="contactformlite"
-        method="post"
-        action="../lite_process.php"
-        onsubmit="return validate.check(this)"
-      >
+      <form>
         <ul id="contact-form">
           <li>
-            <label class="question" for="name">Full Name:</label>
+            <label class="question" for="from_name">Full Name:</label>
             <input
               class="answer"
               id="name"
               maxLength="80"
-              name="name"
+              name="from_name"
               size="35"
               type="text"
+              v-model="from_name"
             />
           </li>
           <li>
@@ -41,6 +37,7 @@
               name="email"
               size="35"
               type="text"
+              v-model="email"
             />
           </li>
           <li>
@@ -50,14 +47,21 @@
               id="message"
               maxLength="1000"
               name="message"
+              v-model="message"
             >
             </textarea>
           </li>
           <li>
-            <input class="submit" type="submit" value="Submit Form" />
+            <input
+              class="submit"
+              type="submit"
+              value="Submit Form"
+              v-on:click="sendForm"
+            />
           </li>
         </ul>
       </form>
+      <p>{{ from_name }}{{ email }}{{ message }}</p>
     </div>
     <div class="lower-full">
       <figure>
@@ -68,11 +72,50 @@
 </template>
 
 <script>
+import emailjs from "emailjs-com";
 import BreakBarSmall from "../components/BreakBarSmall.vue";
 
 export default {
+  data() {
+    return {
+      from_name: "",
+      email: "",
+      message: "",
+    };
+  },
   components: {
     BreakBarSmall,
+  },
+  methods: {
+    sendForm(event) {
+      event.preventDefault();
+      emailjs.send("service_dpwcxj8", "template_1tf80b7", "KKtKItSH5MAGuXiRI", {
+        from_name: this.from_name,
+        email: this.email,
+        message: this.message,
+      });
+    },
+    // sendEmail(e) {
+    //   try {
+    //     emailjs.send(
+    //       "service_dpwcxj8",
+    //       "template_1tf80b7",
+    //       e.target,
+    //       "TnWB9bKN3Svj84-Fw",
+    //       {
+    //         from_name: this.from_name,
+    //         email: this.email,
+    //         message: this.message,
+    //       }
+    //     );
+    //   } catch (error) {
+    //     console.log({ error });
+    //   }
+    // Reset form field
+    // this.from_name = "";
+    // this.email = "";
+    // this.message = "";
+    //},
   },
 };
 </script>
