@@ -14,7 +14,7 @@
     </div>
     <div class="upper-right">
       <h2>Contact Form</h2>
-      <form>
+      <form @submit.prevent="sendEmail">
         <ul id="contact-form">
           <li>
             <label class="question" for="from_name">Full Name:</label>
@@ -23,6 +23,7 @@
               id="name"
               maxLength="80"
               name="from_name"
+              placeholder=" Your Name"
               size="35"
               type="text"
               v-model="from_name"
@@ -35,6 +36,7 @@
               id="email"
               maxLength="100"
               name="email"
+              placeholder=" Your Email"
               size="35"
               type="text"
               v-model="email"
@@ -47,21 +49,16 @@
               id="message"
               maxLength="1000"
               name="message"
+              placeholder=" Message"
               v-model="message"
             >
             </textarea>
           </li>
           <li>
-            <input
-              class="submit"
-              type="submit"
-              value="Submit Form"
-              v-on:click="sendForm"
-            />
+            <input class="submit" type="submit" value="Submit Form" />
           </li>
         </ul>
       </form>
-      <p>{{ from_name }}{{ email }}{{ message }}</p>
     </div>
     <div class="lower-full">
       <figure>
@@ -76,6 +73,7 @@ import emailjs from "emailjs-com";
 import BreakBarSmall from "../components/BreakBarSmall.vue";
 
 export default {
+  name: "ContactUs",
   data() {
     return {
       from_name: "",
@@ -87,35 +85,31 @@ export default {
     BreakBarSmall,
   },
   methods: {
-    sendForm(event) {
-      event.preventDefault();
-      emailjs.send("service_dpwcxj8", "template_1tf80b7", "KKtKItSH5MAGuXiRI", {
-        from_name: this.from_name,
-        email: this.email,
-        message: this.message,
-      });
+    sendEmail(e) {
+      try {
+        emailjs.sendForm(
+          "service_dpwcxj8",
+          "template_1tf80b7",
+          e.target,
+          "KKtKItSH5MAGuXiRI",
+          {
+            name: this.from_name,
+            email: this.email,
+            message: this.meessage,
+          }
+        );
+      } catch (err) {
+        if (err instanceof ReferenceError) {
+          alert("JSON Error: " + err.message);
+        } else {
+          throw err; // rethrow
+        }
+      }
+      // Reset form field
+      this.from_name = "";
+      this.email = "";
+      this.message = "";
     },
-    // sendEmail(e) {
-    //   try {
-    //     emailjs.send(
-    //       "service_dpwcxj8",
-    //       "template_1tf80b7",
-    //       e.target,
-    //       "TnWB9bKN3Svj84-Fw",
-    //       {
-    //         from_name: this.from_name,
-    //         email: this.email,
-    //         message: this.message,
-    //       }
-    //     );
-    //   } catch (error) {
-    //     console.log({ error });
-    //   }
-    // Reset form field
-    // this.from_name = "";
-    // this.email = "";
-    // this.message = "";
-    //},
   },
 };
 </script>

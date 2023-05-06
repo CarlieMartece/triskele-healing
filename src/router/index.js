@@ -28,7 +28,7 @@ const routes = [
   },
   {
     path: "/contact",
-    name: "contact",
+    name: "ContactUs",
     component: EContact,
   },
 ];
