@@ -77,6 +77,7 @@ import BreakBar from "../components/BreakBar.vue";
 import BreakBarSmall from "../components/BreakBarSmall.vue";
 
 export default {
+  name: "LinksPage",
   components: {
     BreakBar,
     BreakBarSmall,

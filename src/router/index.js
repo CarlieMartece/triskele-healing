@@ -8,22 +8,22 @@ import EContact from "../views/EContact.vue";
 const routes = [
   {
     path: "/",
-    name: "home",
+    name: "HomePage",
     component: AHome,
   },
   {
     path: "/treatments",
-    name: "treatments",
+    name: "TreatmentsPage",
     component: BTreatments,
   },
   {
     path: "/courses",
-    name: "courses",
+    name: "CoursesPage",
     component: CCourses,
   },
   {
     path: "/links",
-    name: "links",
+    name: "LinksPage",
     component: DLinks,
   },
   {
