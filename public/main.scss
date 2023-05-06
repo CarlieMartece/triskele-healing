@@ -163,7 +163,11 @@ $darkColor: #2c3e50;
           height: 30px;
           line-height: 30px;
           margin-bottom: 10px;
+          padding-left: 5px;
           width: 99%;
+        }
+        .answer, .message {
+          width: 97%;
         }
         li {
           all: unset;
@@ -187,6 +191,15 @@ $darkColor: #2c3e50;
           .submit {
             margin-left: 120px;
           }
+        }
+      }
+
+      #contact-errors {
+        margin: 5px auto 0;
+        max-width: 390px;
+        width: 95%;
+        @media screen and (min-width: $tabScreen) {
+          width: 250px;
         }
       }
 

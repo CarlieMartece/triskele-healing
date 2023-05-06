@@ -157,7 +157,11 @@
   height: 30px;
   line-height: 30px;
   margin-bottom: 10px;
+  padding-left: 5px;
   width: 99%;
+}
+#content #container main #contact-form .answer, #content #container main #contact-form .message {
+  width: 97%;
 }
 #content #container main #contact-form li {
   all: unset;
@@ -180,6 +184,16 @@
   }
   #content #container main #contact-form .submit {
     margin-left: 120px;
+  }
+}
+#content #container main #contact-errors {
+  margin: 5px auto 0;
+  max-width: 390px;
+  width: 95%;
+}
+@media screen and (min-width: 650px) {
+  #content #container main #contact-errors {
+    width: 250px;
   }
 }
 #content #container main img {
