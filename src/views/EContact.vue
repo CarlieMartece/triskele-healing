@@ -14,7 +14,7 @@
     </div>
     <div class="upper-right">
       <h2>Contact Form</h2>
-      <form @submit.prevent="sendEmail">
+      <form @submit.prevent="checkForm" method="post" novalidate="true">
         <ul id="contact-form">
           <li>
             <label class="question" for="from_name">Full Name:</label>
@@ -38,8 +38,8 @@
               name="email"
               placeholder=" Your Email"
               size="35"
-              type="text"
-              v-model="email"
+              type="email"
+              v-model.trim="email"
             />
           </li>
           <li>
@@ -55,10 +55,18 @@
             </textarea>
           </li>
           <li>
-            <input class="submit" type="submit" value="Submit Form" />
+            <button class="submit" type="submit">Submit Form</button>
           </li>
         </ul>
       </form>
+      <div v-if="errors.length" id="contact-errors">
+        <p>Please correct the following error(s):</p>
+        <ul>
+          <li v-for="error in errors" :key="error.index">
+            {{ error.message }}
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="lower-full">
       <figure>
@@ -76,13 +84,23 @@ export default {
   name: "ContactUs",
   data() {
     return {
-      from_name: "",
-      email: "",
-      message: "",
+      from_name: null,
+      email: null,
+      message: null,
+      errors: [],
     };
   },
   components: {
     BreakBarSmall,
+  },
+  computed: {
+    formIsValid() {
+      if (/^\S+@\S+\.\S+$/.test(this.email) && this.from_name && this.message) {
+        return true;
+      } else {
+        return false;
+      }
+    },
   },
   methods: {
     sendEmail(e) {
@@ -109,6 +127,29 @@ export default {
       this.from_name = "";
       this.email = "";
       this.message = "";
+    },
+    checkForm(e) {
+      this.errors = [];
+      if (!this.from_name) {
+        this.errors.push({ index: 1, message: "Name required" });
+      }
+      if (!this.email) {
+        this.errors.push({ index: 2, message: "Email required" });
+      } else if (!this.validEmail(this.email)) {
+        this.errors.push({ index: 3, message: "Valid email required" });
+      }
+      if (!this.message) {
+        this.errors.push({ index: 4, message: "Message required" });
+      }
+      e.preventDefault();
+      if (!this.errors.length) {
+        this.sendEmail(e);
+      }
+    },
+    validEmail() {
+      var re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(this.email);
     },
   },
 };
