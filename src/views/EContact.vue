@@ -14,7 +14,7 @@
     </div>
     <div class="upper-right">
       <h2>Contact Form</h2>
-      <form @submit.prevent="checkForm" method="post" novalidate="true">
+      <form @submit.prevent="checkForm">
         <ul id="contact-form">
           <li>
             <label class="question" for="from_name">Full Name:</label>
@@ -109,7 +109,7 @@ export default {
           "service_dpwcxj8",
           "template_1tf80b7",
           e.target,
-          "KKtKItSH5MAGuXiRI",
+          "wp8OTPm248sAVCgIH",
           {
             name: this.from_name,
             email: this.email,
