@@ -7,7 +7,7 @@
 }
 
 #app {
-  background-color: #357960;
+  background-image: url("../images/background-tile.jpg");
   height: 100vh;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
